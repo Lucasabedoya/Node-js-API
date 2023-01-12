@@ -5,7 +5,7 @@ const main = () => {
 
     app.listen(app.get('port'), () => {
         console.log(`🚀 server on port ${app.get('port')}`);
-        swaggerDocs( app, 4000 )
+        swaggerDocs( app, app.get('port') )
     });
 };
 

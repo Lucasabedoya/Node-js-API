@@ -4,7 +4,7 @@ import { getConnection } from "../database/database"
 const getAllPersonas = async ( req, res ) => {
     try {
         const connection = await getConnection()
-        const result = await connection.query("SELECT cedula, nombre, apellido FROM personas");
+        const result = await connection.query("SELECT * FROM personas");
         if ( result.length !== 0 ) { 
             res.json(result)
         } else { 
